@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clay' App</title>
+    <!-- Styles from MU Bootstrap below below -->
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"
+    ></script>
+  </head>
+  <!-- Header Component -->
+  <header-component></header-component>
+  <!-- Jumbotron -->
+  <div
+    class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+    style="
+      background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.webp');
+    "
+  >
+    <h1 class="mb-3 h2">Jumbotron</h1>
+
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellendus
+      praesentium labore accusamus sequi, voluptate debitis tenetur in deleniti
+      possimus modi voluptatum neque maiores dolorem unde? Aut dolorum quod
+      excepturi fugit.
+    </p>
+  </div>
+  <!-- Jumbotron -->
+
+  <body>
+    <div class="container-sm w-50 rounded">
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="card mb-3 d-flex hover-overlay ripple "
+          data-mdb-ripple-color="light""">
+          <img
+            id="cardCover"
+            src="assests/images/DefaultPhoto.jpg"
+            class="card-img-top"
+            alt="Music Playlist"
+          />
+          <div class="card-body text-center">
+            <h5 class="card-title">Card title</h5>
+            <button type="button" class="btn btn-floating btn-lg">
+              <i class="fas fa-backward fa-2x"></i>
+            </button>
+            <button type="button" id="playBtn" class="btn btn-floating btn-lg">
+              <i class="fas fa-play"></i>
+            </button>
+            <button type="button" class="btn btn-floating btn-lg">
+              <i class="fas fa-forward fa-2x"></i>
+            </button>
+            <div class="text-center">
+              <label class="form-label" for="customRange1">Example range</label>
+              <div class="range">
+                <input type="range" class="form-range" id="customRange1" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-6">
+          <div class="card hover-overlay ripple "
+          data-mdb-ripple-color="light"" style="width: 18rem">
+            <div class="card-header">Playlist</div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Song One</li>
+              <li class="list-group-item">Song Two</li>
+              <li class="list-group-item">Song Three</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <!-- Footer Component -->
+  <footer-component></footer-component>
+  <!-- Scripts to allowing header, footer, and index to run -->
+  <script src="components/header.js" type="text/javascript" defer></script>
+  <script src="components/footer.js" type="text/javascript" defer></script>
+  <script src="src/index.js"></script>
+</html>

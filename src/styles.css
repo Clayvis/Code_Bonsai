@@ -1,0 +1,7 @@
+/* Switches to dark mode based on user setting  */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+    color: #ccc;
+  }
+}
