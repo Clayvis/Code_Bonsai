@@ -7,6 +7,19 @@ if ("serviceWorker" in navigator) {
 	});
 }
 
+let form = document
+	.querySelector("#cFormTwo")
+	.addEventListener("submit", handleFormSubmit);
+
+function handleFormSubmit(e) {
+	e.preventDefault();
+	let formEmail = document.getElementById("signInEmail").value;
+	let formPassword = document.getElementById("signPassword").value;
+	//console.log(e);
+	//console.log(formEmail, formPassword);
+	sessionStorage.setItem(formEmail, formPassword);
+}
+
 (function (html) {
 	"use strict";
 
@@ -237,6 +250,10 @@ if ("serviceWorker" in navigator) {
 			slidesPerView: 1,
 			effect: "fade",
 			speed: 1000,
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
 			pagination: {
 				el: ".swiper-pagination",
 				clickable: true,
@@ -336,6 +353,17 @@ if ("serviceWorker" in navigator) {
 			moveTo.registerTrigger(trigger);
 		});
 	}; // end ssMoveTo
+	var swiper = new Swiper(".mySwiper", {
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true,
+			renderBullet: function (index, className) {
+				return (
+					'<span class="' + className + '">' + (index + 1) + "</span>"
+				);
+			},
+		},
+	});
 
 	/* Initialize
 	 * ------------------------------------------------------ */
@@ -349,5 +377,6 @@ if ("serviceWorker" in navigator) {
 		ssAlertBoxes();
 		ssBackToTop();
 		ssMoveTo();
+		swiper();
 	})();
 })(document.documentElement);
