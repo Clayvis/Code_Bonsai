@@ -8,7 +8,7 @@ function handleFormSubmit(e) {
 	e.preventDefault();
 	let formEmail = document.getElementById("signInEmail").value;
 	let formPassword = document.getElementById("signPassword").value;
-	//sessionStorage.setItem(formEmail, formPassword);
+	sessionStorage.setItem(formEmail, formPassword);
 	sessionStorage.setItem("status", "isLoggedIn");
 
 	setTimeout(() => {
