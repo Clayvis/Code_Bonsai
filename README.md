@@ -1,2 +1,2 @@
-# JS_MiniProject
-Advanced Group Mini Project
+# Code_Bonsai
+Advanced Group Mini Project in HTML/CSS
