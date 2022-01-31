@@ -1,3 +1,5 @@
+// service worker
+
 if ("serviceWorker" in navigator) {
 	window.addEventListener("load", () => {
 		navigator.serviceWorker
@@ -7,18 +9,27 @@ if ("serviceWorker" in navigator) {
 	});
 }
 
-let form = document
-	.querySelector("#cFormTwo")
-	.addEventListener("submit", handleFormSubmit);
+// redirects to sign in page if not logged in
 
-function handleFormSubmit(e) {
-	e.preventDefault();
-	let formEmail = document.getElementById("signInEmail").value;
-	let formPassword = document.getElementById("signPassword").value;
-	//console.log(e);
-	//console.log(formEmail, formPassword);
-	sessionStorage.setItem(formEmail, formPassword);
+if (
+	window.location.pathname == "/index.html" ||
+	window.location.pathname == "/signInSignUp.html"
+) {
+	console.log("Welcome");
+} else {
+	if (sessionStorage.getItem("status") == null) {
+		setTimeout(() => {
+			window.alert("Please Log In");
+		}, 2000);
+		setTimeout(() => {
+			window.location.href = "/signInSignUp.html";
+		}, 6000);
+	} else {
+		console.log("Your Logged in");
+	}
 }
+
+// animations, masonory / slider
 
 (function (html) {
 	"use strict";
